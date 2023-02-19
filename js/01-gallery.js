@@ -33,6 +33,7 @@ function onImageContainerClick(evt) {
         return;
     }
 
+    evt.preventDefault();
 
     const instance = basicLightbox.create(`
     <img src="${evt.target.dataset.source}" >
