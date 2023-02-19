@@ -33,5 +33,10 @@ function onImageContainerClick(evt) {
         return;
     }
 
-    console.log(evt.target.dataset);
+
+    const instance = basicLightbox.create(`
+    <img src="${evt.target.dataset.source}" >
+`)
+
+    instance.show()
 }
