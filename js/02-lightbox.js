@@ -9,7 +9,6 @@ const imageMarkup = createImageCardMarkup(galleryItems);
 
 imageContainer.insertAdjacentHTML('beforeend', imageMarkup);
 
-imageContainer.addEventListener('click', onImageContainerClick);
 
 function createImageCardMarkup(galleryItems) {
     return galleryItems.map(({ preview, original, description }) => {
@@ -19,16 +18,5 @@ function createImageCardMarkup(galleryItems) {
     }).join('');
 }
 
-function onImageContainerClick(evt) {
-    const isImgSwatchEl = evt.target.classList.contains('gallery__image');
-
-    if (!isImgSwatchEl) {
-        return;
-    }
-
-    evt.preventDefault();
 
     let gallery = new SimpleLightbox('.gallery a');
-
-    
-}
